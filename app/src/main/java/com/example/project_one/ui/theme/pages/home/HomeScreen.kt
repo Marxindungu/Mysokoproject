@@ -1,6 +1,7 @@
 package com.example.project_one.ui.theme.pages.home
 
 import android.content.res.Configuration
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Button
@@ -9,9 +10,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import com.example.project_one.R
 import com.example.project_one.data.ProductRepository
 import com.example.project_one.navigation.ROUTE_ADD_PRODUCTS
 import com.example.project_one.navigation.ROUTE_VIEW_PRODUCTS
@@ -26,6 +29,9 @@ fun HomeScreen(navController: NavHostController) {
         var productRepository = ProductRepository(navController,context)
 
         Text(text = "Welcome to home page")
+
+        Image(painter = painterResource(R.drawable.watch),
+            contentDescription = null)
 
         Button(onClick = {
             navController.navigate(ROUTE_ADD_PRODUCTS)
