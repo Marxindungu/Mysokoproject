@@ -1,5 +1,6 @@
 package com.example.project_one.ui.theme.pages.products
 
+import android.content.res.Configuration
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -21,6 +22,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
@@ -70,7 +73,6 @@ fun ViewProductsScreen(navController:NavHostController) {
         }
     }
 }
-
 
 @Composable
 fun ProductItem(name:String, number:String, quantity:String, price:String, id:String,

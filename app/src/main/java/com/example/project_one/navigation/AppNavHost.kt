@@ -12,7 +12,7 @@ import com.example.project_one.ui.theme.pages.about.AboutScreen
 import com.example.project_one.ui.theme.pages.home.HomeScreen
 import com.example.project_one.ui.theme.pages.login.LoginScreen
 import com.example.project_one.ui.theme.pages.products.AddProductsScreen
-import com.example.project_one.ui.theme.pages.products.UpdateProductsScreen
+import com.example.project_one.ui.theme.pages.products.ServiceScreen
 import com.example.project_one.ui.theme.pages.products.ViewUploadsScreen
 import com.example.project_one.ui.theme.pages.signup.SignupScreen
 
@@ -44,7 +44,7 @@ fun AppNavHost(modifier: Modifier = Modifier,
             ViewProductsScreen(navController)
         }
         composable(ROUTE_UPDATE_PRODUCTS + "/{id}") { passedData ->
-            UpdateProductsScreen(navController, passedData.arguments?.getString("id")!!)
+            ServiceScreen(navController, passedData.arguments?.getString("id")!!)
         }
 
     }

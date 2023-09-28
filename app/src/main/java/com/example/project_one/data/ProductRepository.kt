@@ -5,6 +5,7 @@ import android.content.Context
 import android.net.Uri
 import android.widget.Toast
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.Updater
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.navigation.NavHostController
 import com.example.project_one.modules.Product
@@ -83,7 +84,7 @@ class ProductRepository(var navController: NavHostController, var context: Conte
         }
     }
 
-    fun updateProduct(name:String, number:String, quantity:String, price:String,id:String){
+    fun uploadProduct(name:String, number:String, quantity:String, price:String,id:String){
         var updateRef = FirebaseDatabase.getInstance().getReference()
             .child("Products/$id")
         progress.show()
@@ -152,4 +153,5 @@ class ProductRepository(var navController: NavHostController, var context: Conte
     }
 
 
-}
+    }
+
